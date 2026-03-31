@@ -13,8 +13,8 @@ def generate_data(n=150):
     }
     
     # Generate marks FIRST
-    marks = (data['Study_Hours']*8 + data['Sleep_Hours']*5 + 
-             data['Attendance']*0.3 + data['Previous_Marks']*0.4 + 20)
+    marks = (data['Study_Hours']*3 + data['Sleep_Hours']*2 + 
+         data['Attendance']*0.3 + data['Previous_Marks']*0.3 + 10)
     data['Final_Marks'] = np.clip(np.random.normal(marks, 8), 0, 100)
     
     df = pd.DataFrame(data)
